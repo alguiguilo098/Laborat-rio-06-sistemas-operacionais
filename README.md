@@ -1,0 +1,1 @@
+# Laborat-rio-06-sistemas-operacionais
