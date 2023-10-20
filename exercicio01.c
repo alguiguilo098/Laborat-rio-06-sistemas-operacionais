@@ -2,13 +2,17 @@
 #include<stdlib.h>
 #include<string.h>
 #include<pthread.h>
+#include<limits.h>
 
-pthread_mutex_t mut;
-#define QUANTIDADE_THREAD_PONG 10
-#define QUANTIDADE_THREAD_PING 1
+#define QUANTIDADE_THREAD_PONG 200000
+#define QUANTIDADE_THREAD_PING 200000
+
 pthread_t thread_ping[QUANTIDADE_THREAD_PONG];
 pthread_t thread_pong[QUANTIDADE_THREAD_PING];
+
 char palavra[200];
+
+pthread_mutex_t mut;
 
 void* ping(void*arg){
     pthread_mutex_lock(&mut);
